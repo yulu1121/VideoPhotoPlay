@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyRatingBar">
+        <!--尺寸值-->
+        <attr name="starImageSize" format="dimension" />
+        <!--星星间距-->
+        <attr name="starPadding" format="dimension" />
+        <!--星星总数-->
+        <attr name="starCount" format="integer" />
+        <!--空白的星星资源文件值-->
+        <attr name="starEmpty" format="reference" />
+        <!--满星资源文件值-->
+        <attr name="starFill" format="reference" />
+        <!--半星资源文件值-->
+        <attr name="starHalf" format="reference" />
+        <!--是否可点击boolean值-->
+        <attr name="clickable" format="boolean" />
+        <!--当前进度float值-->
+        <attr name="starStep" format="float" />
+        <!--每次进度方式的值，整星还是半星-->
+        <attr name="stepSize">
+            <enum name="Half" value="0" />
+            <enum name="Full" value="1" />
+        </attr>
+    </declare-styleable>
+    <attr name="xmlLayoutResId" format="reference"/>
+    <attr name="isRandom" format="boolean"/>
+    <attr name="keyDrawable" format="reference"/>
+    <declare-styleable name="SystemKeyboard">
+        <attr name="xmlLayoutResId"/>
+        <attr name="keyDrawable"/>
+        <attr name="isRandom"/>
+    </declare-styleable>
+    <declare-styleable name="SystemKeyBoardEditText">
+        <attr name="xmlLayoutResId"/>
+        <attr name="keyDrawable"/>
+        <attr name="outSideCancel" format="boolean"/>
+        <attr name="space" format="boolean"/>
+        <attr name="isRandom"/>
+    </declare-styleable>
+    <declare-styleable name="EaseImageView">
+        <attr name="ease_border_color" format="color" />
+        <attr name="ease_border_width" format="dimension" />
+        <attr name="ease_press_alpha" format="integer" />
+        <attr name="ease_press_color" format="color" />
+        <attr name="ease_radius" format="dimension" />
+        <attr name="ease_shape_type" format="enum">
+            <enum name="none" value="0" />
+            <enum name="round" value="1" />
+            <enum name="rectangle" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="RoundBackChange">
+        <attr name="self_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="PswInputView">
+        <attr name="count" format="integer" />
+        <attr name="border_color" format="color" />
+        <attr name="dot_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RealtimeBlurView">
+        <attr name="realtimeBlurRadius" format="float" />
+        <attr name="realtimeDownsampleFactor" format="float" />
+        <attr name="realtimeOverlayColor" format="color" />
+        <attr name="realtimeBlurRoundCornerRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="LabelTextView">
+
+        <attr name="backgroundColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="numColor" format="color" />
+
+        <attr name="text" format="string" />
+        <attr name="num" format="string" />
+
+        <attr name="numSize" format="dimension" />
+        <attr name="textsSize" format="dimension" />
+
+        <attr name="labelTopPadding" format="dimension" />
+        <attr name="labelCenterPadding" format="dimension" />
+        <attr name="labelBottomPadding" format="dimension" />
+
+
+        <attr name="numStyle">
+            <enum name="normal" value="0" />
+            <enum name="italic" value="1" />
+            <enum name="bold" value="2" />
+        </attr>
+
+        <attr name="textStyle">
+            <enum name="normal" value="0" />
+            <enum name="italic" value="1" />
+            <enum name="bold" value="2" />
+        </attr>
+
+        <attr name="direction">
+            <enum name="leftTop" value="-45" />
+            <enum name="rightTop" value="45" />
+        </attr>
+
+
+    </declare-styleable>
+
+    <declare-styleable name="WaterMaskView">
+        <!--栏背景色-->
+        <attr name="title_background_color" format="color" />
+        <!--左边按钮是否可见-->
+        <attr name="left_button_visible" format="boolean" />
+        <!--公司文字-->
+        <attr name="company_text" format="string" />
+        <!--公司文字颜色-->
+        <attr name="title_text_color" format="color" />
+        <!--logo文字-->
+        <attr name="logo_button_text" format="string" />
+        <!--左边按钮文字颜色-->
+        <attr name="logo_button_text_color" format="color" />
+        <!--左边按钮图标-->
+        <attr name="logo_button_drawable" format="reference|integer" />
+        <!--相关信息文字-->
+        <attr name="info_text" format="string" />
+        <!--相关信息文字颜色-->
+        <attr name="info_text_color" format="color" />
+        <!--右边按钮图标-->
+        <attr name="right_button_drawable" format="reference|integer" />
+    </declare-styleable>
+    <declare-styleable name="LoadingView">
+        <attr name="loading_renderer">
+            <!--circle rotate-->
+            <enum name="MaterialLoadingRenderer" value="0" />
+            <enum name="LevelLoadingRenderer" value="1" />
+            <enum name="WhorlLoadingRenderer" value="2" />
+            <enum name="GearLoadingRenderer" value="3" />
+            <!--circle jump-->
+            <!--<enum name="SwapLoadingRenderer" value="4"/>-->
+            <!--<enum name="GuardLoadingRenderer" value="5"/>-->
+            <!--<enum name="DanceLoadingRenderer" value="6"/>-->
+            <!--<enum name="CollisionLoadingRenderer" value="7"/>-->
+            <!--&lt;!&ndash;Scenery&ndash;&gt;-->
+            <!--<enum name="DayNightLoadingRenderer" value="8"/>-->
+            <!--<enum name="ElectricFanLoadingRenderer" value="9"/>-->
+            <!--&lt;!&ndash;Animal&ndash;&gt;-->
+            <!--<enum name="FishLoadingRenderer" value="10"/>-->
+            <!--<enum name="GhostsEyeLoadingRenderer" value="11"/>-->
+            <!--&lt;!&ndash;Goods&ndash;&gt;-->
+            <!--<enum name="BalloonLoadingRenderer" value="12"/>-->
+            <!--<enum name="WaterBottleLoadingRenderer" value="13"/>-->
+            <!--&lt;!&ndash;ShapeChange&ndash;&gt;-->
+            <!--<enum name="CircleBroodLoadingRenderer" value="14"/>-->
+            <!--<enum name="CoolWaitLoadingRenderer" value="15"/>-->
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ArcImageView">
+        <attr name="arcHeight" format="dimension" />
+        <attr name="bColor" format="color" />
+        <attr name="mDirection" format="enum">
+            <enum name="out" value="0" />
+            <enum name="inner" value="1" />
+        </attr>
+        <attr name="mPosition" format="enum">
+            <enum name="left" value="0" />
+            <enum name="top" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="YLCircleImageView">
+        <attr name="radiusYL" format="dimension">圆角半径</attr>
+        <attr name="topLeftRadiusYL" format="dimension">左上</attr>
+        <attr name="topRightRadiusYL" format="dimension">右上</attr>
+        <attr name="bottomLeftRadiusYL" format="dimension">左下</attr>
+        <attr name="bottomRightRadiusYL" format="dimension">右下</attr>
+
+        <attr name="topLeftRadius_xYL" format="dimension">左上X轴</attr>
+        <attr name="topLeftRadius_yYL" format="dimension">左上Y轴</attr>
+
+        <attr name="topRightRadius_xYL" format="dimension">右上X轴</attr>
+        <attr name="topRightRadius_yYL" format="dimension">右上Y轴</attr>
+
+        <attr name="bottomLeftRadius_xYL" format="dimension">左下X轴</attr>
+        <attr name="bottomLeftRadius_yYL" format="dimension">左下Y轴</attr>
+
+        <attr name="bottomRightRadius_xYL" format="dimension">右下X轴</attr>
+        <attr name="bottomRightRadius_yYL" format="dimension">右下Y轴</attr>
+
+        <attr name="borderWidthYL" format="dimension">描边宽度</attr>
+        <attr name="borderColorYL" format="color">描边颜色</attr>
+        <attr name="borderSpaceYL" format="dimension">描边与图片间距</attr>
+        <!-- 无论是什么展示形式，都会填充满整个控件，如果不想填充满，自己去改onDraw里面的 dst -->
+        <attr name="scaleTypeYL" format="enum">
+            <enum name="top" value="0">从图片顶部开始绘制，即肯定会展示图片顶部，默认</enum>
+            <enum name="center" value="1">展示图片中心</enum>
+            <enum name="bottom" value="2">从图片底部开始绘制，即肯定会展示图片底部</enum>
+            <enum name="fitXY" value="3">完全展示，有可能变形</enum>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="AddWidget">
+        <attr name="circle_anim" format="boolean" />
+        <attr name="sub_anim" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="EaseSwitchButton">
+        <attr name="switchOpenImage" format="reference" />
+        <attr name="switchCloseImage" format="reference" />
+        <attr name="switchStatus">
+            <enum name="open" value="0" />
+            <enum name="close" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CollapsibleTextView">
+        <attr name="suffixColor" format="color" />
+        <attr name="collapsedLines" format="integer" />
+        <attr name="collapsedText" format="string" />
+        <attr name="expandedText" format="string" />
+        <attr name="suffixTrigger" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcProgressBar">
+        <attr name="arc_max_progress" format="float" />
+        <attr name="arc_bg_color" format="color" />
+        <attr name="arc_stroke_width" format="dimension" />
+        <attr name="arc_progress" format="float" />
+        <attr name="arc_progress_color" format="color" />
+        <attr name="arc_first_text" format="string" />
+        <attr name="arc_first_text_color" format="color" />
+        <attr name="arc_first_text_size" format="dimension" />
+        <attr name="arc_second_text" format="string" />
+        <attr name="arc_second_text_color" format="color" />
+        <attr name="arc_second_text_size" format="dimension" />
+        <attr name="arc_angle_size" format="float" />
+        <attr name="arc_start_angle" format="float" />
+    </declare-styleable>
+    <declare-styleable name="CircleLayout">
+        <attr name="radius" format="dimension" />
+        <attr name="offset" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RingProgressBar">
+        <attr name="ringColor" format="color" />
+        <attr name="ringProgressColor" format="color" />
+        <attr name="textsColor" format="color" />
+        <attr name="ringWidth" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer" />
+        <attr name="showTextProgress" format="boolean" />
+        <attr name="ringText" format="string" />
+        <attr name="style">
+            <enum name="STROKE" value="0" />
+            <enum name="FULL" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CircleView">
+        <attr name="circleBack" format="color" />
+        <attr name="circleText" format="string" />
+    </declare-styleable>
+    <declare-styleable name="RectView">
+        <attr name="rectBack" format="color" />
+        <attr name="rectText" format="string" />
+        <attr name="rectTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="LabelView">
+        <!-- 设置文字内容 -->
+        <attr name="lv_text" format="string" />
+        <!-- 设置文字颜色,默认#ffffff -->
+        <attr name="lv_text_color" format="color" />
+        <!-- 设置文字大小,默认11sp -->
+        <attr name="lv_text_size" format="dimension" />
+        <!-- 设置文字是否支持加粗,默认true -->
+        <attr name="lv_text_bold" format="boolean" />
+        <!-- 设置文字是否支持全部大写,默认true-->
+        <attr name="lv_text_all_caps" format="boolean" />
+        <!-- 设置背景颜色,默认"#FF4081"-->
+        <attr name="lv_background_color" format="color" />
+        <!-- 设置LabelView所在矩形最小宽高,默认mFillTriangle?35dp:50dp-->
+        <attr name="lv_min_size" format="dimension" />
+        <!-- 设置文字上下padding,默认3.5dp,mFillTriangle为true时无效-->
+        <attr name="lv_padding" format="dimension" />
+        <!-- 设置LabelView方向 -->
+        <attr name="lv_gravity" format="enum">
+            <enum name="TOP_LEFT" value="51" />
+            <enum name="TOP_RIGHT" value="53" />
+            <enum name="BOTTOM_LEFT" value="83" />
+            <enum name="BOTTOM_RIGHT" value="85" />
+        </attr>
+        <!-- 设置是否填充三角区域,默认false -->
+        <attr name="lv_fill_triangle" format="boolean" />
+        <!-- 设置是否浮嵌显示大小 -->
+        <attr name="lv_fill_size" format="integer" />
+    </declare-styleable>
+</resources>

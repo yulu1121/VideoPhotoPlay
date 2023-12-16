@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    android:baselineAligned="false">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6.3"
+        android:background="@color/main_color"
+        >
+        <com.anssy.videophotoplay.selfview.videoplay.AdvanceView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/home_vp"
+            android:clickable="false"
+            />
+        <!--        <com.anssy.videophotoplay.selfview.hbanner.banner.view.BannerViewPager-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:id="@+id/home_vp"-->
+        <!--            android:clickable="false"-->
+        <!--            />-->
+
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:textSize="@dimen/medium_txt"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:text="2023-4-21 13:47:44"-->
+        <!--            android:id="@+id/time_tv"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:layout_marginStart="10dp"-->
+        <!--            />-->
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3.7"
+        android:background="@drawable/bg_home_right"
+        >
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:layout_above="@id/bottom_layout"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="33dp"
+                android:layout_marginEnd="33dp"
+                android:layout_marginTop="30dp"
+                >
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="擦鞋"
+                    android:id="@+id/ca_shoes_btn"
+                    android:background="@drawable/bg_btn_caxie"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/xiaodu_btn"
+                    android:text="消毒除臭"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_btn_xiaodu"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="洗鞋"
+                    android:id="@+id/wash_shoes_btn"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_btn_xixie"
+                    />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="33dp"
+            android:id="@+id/bottom_layout"
+            android:background="@drawable/bg_btn_qu"
+            android:layout_marginEnd="33dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                >
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="@null"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/icon_btn_qu"
+                    android:layout_gravity="center_vertical"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="取"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
