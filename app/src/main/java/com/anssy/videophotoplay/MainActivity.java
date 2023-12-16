@@ -11,9 +11,8 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.anssy.videophotoplay.selfview.videoplay.Advance;
-import com.anssy.videophotoplay.selfview.videoplay.AdvanceView;
-import com.anssy.videophotoplay.utils.videocache.utils.ProxyCacheUtils;
+import com.anssy.videophotoplay.videoplay.Advance;
+import com.anssy.videophotoplay.videoplay.AdvanceView;
 import com.jaeger.library.StatusBarUtil;
 
 import java.io.UnsupportedEncodingException;
