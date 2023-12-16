@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.github.videophotoplay.utils.glide.GlideApp;
+import com.bumptech.glide.Glide;
 
 
 public class AdvanceImageView extends RelativeLayout {
@@ -34,7 +34,7 @@ public class AdvanceImageView extends RelativeLayout {
     }
  
     public void setImage(String path) {
-        GlideApp.with(getContext()).load(path).into(imageView);
+        Glide.with(getContext()).load(path).into(imageView);
     }
  
 }

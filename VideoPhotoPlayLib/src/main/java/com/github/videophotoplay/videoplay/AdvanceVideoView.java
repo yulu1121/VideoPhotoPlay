@@ -11,8 +11,8 @@ import android.view.ViewParent;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.anssy.videophotoplay.R;
-import com.github.videophotoplay.utils.glide.GlideApp;
+
+import com.bumptech.glide.Glide;
 import com.github.videophotoplay.utils.videocache.VideoProxyCacheManager;
 import com.github.videophotoplay.utils.videocache.listener.IVideoCacheListener;
 import com.github.videophotoplay.utils.videocache.model.VideoCacheInfo;
@@ -54,7 +54,7 @@ public class AdvanceVideoView extends RelativeLayout implements IVideoCacheListe
     public void setImage(String path,VideoView  videoView) {
         this.path = path;
         this.videoView = videoView;
-        GlideApp.with(getContext()) .setDefaultRequestOptions(
+        Glide.with(getContext()) .setDefaultRequestOptions(
                 new RequestOptions()
                         .frame(0)
         ).load(path).into(imageView);
