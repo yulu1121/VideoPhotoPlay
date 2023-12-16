@@ -3,17 +3,14 @@ package com.anssy.videophotoplay;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.anssy.videophotoplay.selfview.videoplay.Advance;
-import com.anssy.videophotoplay.selfview.videoplay.AdvanceView;
-import com.anssy.videophotoplay.utils.videocache.utils.ProxyCacheUtils;
+import com.github.videophotoplay.videoplay.Advance;
+import com.github.videophotoplay.videoplay.AdvanceView;
 import com.jaeger.library.StatusBarUtil;
 
 import java.io.UnsupportedEncodingException;
