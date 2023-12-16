@@ -33,10 +33,10 @@ public class BaseApplication extends Application {
                 .setPlayerFactory(IjkPlayerFactory.create())
                 .setLogEnabled(true)
                 .build());
-        setCache();
+        setCaches();
     }
 
-    private void setCache(){
+    private void setCaches(){
         File saveFile =  new File(getExternalFilesDir(null).toString()+File.separator+"videocache");
         if (!saveFile.exists()) {
             saveFile.mkdir();
