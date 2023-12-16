@@ -1,9 +1,8 @@
 package com.anssy.videophotoplay.base;
 
 import android.app.Application;
-import android.util.Log;
 
-import com.anssy.videophotoplay.utils.videocache.VideoProxyCacheManager;
+import com.github.videophotoplay.utils.videocache.VideoProxyCacheManager;
 
 import java.io.File;
 
