@@ -11,6 +11,7 @@ import xyz.doikki.videoplayer.ijk.IjkPlayerFactory;
 import xyz.doikki.videoplayer.player.VideoViewConfig;
 import xyz.doikki.videoplayer.player.VideoViewManager;
 
+
 public class BaseApplication extends Application {
     public static BaseApplication instances;
 
