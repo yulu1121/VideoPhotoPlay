@@ -64,6 +64,13 @@ afterEvaluate {
         publications {
             group = 'com.github.videophoto'
             version = '1.0.0'
+            mavenJava(MavenPublication) {
+                // 这里头是artifacts的配置信息，不填会采用默认的
+                groupId = group
+                artifactId = 'videophoto'
+                version = version
+            }
+
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 from components.release // 表示发布 release（jitpack 都不会使用到）
