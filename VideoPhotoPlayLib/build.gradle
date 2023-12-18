@@ -34,8 +34,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
-}
 
+    task generateSourcesJar(type: Jar){
+        from android.sourceSets.main.java.srcDirs
+        classifier  'sources'
+    }
+}
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -56,7 +64,6 @@ afterEvaluate {
         publications {
             group = 'com.github.videophoto'
             version = '1.0.0'
-
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 from components.release // 表示发布 release（jitpack 都不会使用到）
