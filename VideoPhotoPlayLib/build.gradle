@@ -65,7 +65,7 @@ afterEvaluate {
     publishing {
         publications {
             group = 'com.github.videophoto'
-            version = '1.0.0'
+            version = '1.0.1'
             mavenJava(MavenPublication) {
                 // 这里头是artifacts的配置信息，不填会采用默认的
                 groupId = group

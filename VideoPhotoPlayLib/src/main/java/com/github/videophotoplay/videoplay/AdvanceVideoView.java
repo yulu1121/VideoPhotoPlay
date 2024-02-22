@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+;
 
 
 import com.bumptech.glide.Glide;
@@ -20,6 +21,7 @@ import com.github.videophotoplay.utils.videocache.utils.ProxyCacheUtils;
 import com.bumptech.glide.request.RequestOptions;
 
 import xyz.doikki.videoplayer.player.VideoView;
+
 
 public class AdvanceVideoView extends RelativeLayout implements IVideoCacheListener {
     public ImageView imageView;
@@ -51,7 +53,7 @@ public class AdvanceVideoView extends RelativeLayout implements IVideoCacheListe
         addView(imageView, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
     }
  
-    public void setImage(String path,VideoView  videoView) {
+    public void setImage(String path, VideoView videoView) {
         this.path = path;
         this.videoView = videoView;
         Glide.with(getContext()) .setDefaultRequestOptions(
@@ -77,14 +79,20 @@ public class AdvanceVideoView extends RelativeLayout implements IVideoCacheListe
         videoView.release();
         videoView.setPlayerBackgroundColor(Color.parseColor("#0F1B2F"));
         videoView.setScreenScaleType(VideoView.SCREEN_SCALE_MATCH_PARENT);
-        if (VideoProxyCacheManager.getInstance().isTaskPause(path)){
-            VideoProxyCacheManager.getInstance().resumeCacheTask(path);
+        String playUrl = "";
+        if(path.startsWith("http")||path.startsWith("https")){
+            if (VideoProxyCacheManager.getInstance().isTaskPause(path)){
+                VideoProxyCacheManager.getInstance().resumeCacheTask(path);
+            }else {
+                VideoProxyCacheManager.getInstance().startRequestVideoInfo(Uri.parse(path).toString());
+            }
+            VideoProxyCacheManager.getInstance().addCacheListener(path,this);
+            VideoProxyCacheManager.getInstance().setPlayingUrlMd5(ProxyCacheUtils.computeMD5(path));
+            playUrl = ProxyCacheUtils.getProxyUrl(Uri.parse(path).toString(), null, null);
         }else {
-            VideoProxyCacheManager.getInstance().startRequestVideoInfo(Uri.parse(path).toString());
+            playUrl = path;
         }
-        VideoProxyCacheManager.getInstance().addCacheListener(path,this);
-        VideoProxyCacheManager.getInstance().setPlayingUrlMd5(ProxyCacheUtils.computeMD5(path));
-        String playUrl = ProxyCacheUtils.getProxyUrl(Uri.parse(path).toString(), null, null);
+
 //        if (VideoProxyCacheManager.getInstance().isTaskPause(path)){
 //            VideoProxyCacheManager.getInstance().resumeCacheTask(path);
 //        }
