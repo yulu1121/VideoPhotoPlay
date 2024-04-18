@@ -78,10 +78,11 @@ public class AdvancePagerAdapter extends PagerAdapter implements ViewPager.OnPag
         notifyDataSetChanged();
         //在外层，将mViewPager初始位置设置为1即可
         if (advances.get(0).type.equals("1")) {//有人反应第一个是视频不播放这边优化了一下
-//            if ( ((AdvanceVideoView) list.get(viewPager.getCurrentItem())).imageView!=null){
-//                ((AdvanceVideoView) list.get(viewPager.getCurrentItem())).imageView.setVisibility(View.VISIBLE);
-//            }
-            ((AdvanceVideoView) list.get(viewPager.getCurrentItem())).setVideo();
+            if (list.size()>1){
+                ((AdvanceVideoView) list.get(1)).setVideo();
+            }else {
+                ((AdvanceVideoView) list.get(0)).setVideo();
+            }
         }else {
             time = advances.get(0).getPlaySecond()*1000;
         }

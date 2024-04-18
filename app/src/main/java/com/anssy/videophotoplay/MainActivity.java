@@ -29,16 +29,16 @@ public class MainActivity extends AppCompatActivity {
         initView();
         initData();
         //模拟刷新数据,自行放开
-         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                data.clear();
-                //https://t7.baidu.com/it/u=1956604245,3662848045&fm=193&f=GIF
-                Advance advance = new Advance(toURLString("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4").trim(),"1",0);
-                data.add(advance);
-                mViewPager.setData(data);
-            }
-        },20000);
+//         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                data.clear();
+//                //https://t7.baidu.com/it/u=1956604245,3662848045&fm=193&f=GIF
+//                Advance advance = new Advance(toURLString("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4").trim(),"1",0);
+//                data.add(advance);
+//                mViewPager.setData(data);
+//            }
+//        },20000);
     }
 
     private final List<Advance> data = new ArrayList<>();
