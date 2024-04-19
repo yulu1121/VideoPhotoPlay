@@ -7,7 +7,7 @@ allprojects {
     }
 }
 dependencies {
-   implementation 'com.github.yulu1121.VideoPhotoPlay:videophoto:1.1.6'
+   implementation 'com.github.yulu1121.VideoPhotoPlay:videophoto:1.1.7'
 }
 ```
 
