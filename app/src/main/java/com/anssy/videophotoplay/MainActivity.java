@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.github.videophotoplay.videoplay.Advance;
 import com.github.videophotoplay.videoplay.AdvanceView;
+import com.github.videophotoplay.videoplay.MediaType;
 import com.jaeger.library.StatusBarUtil;
 
 import java.io.UnsupportedEncodingException;
@@ -33,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
 //            @Override
 //            public void run() {
 //                data.clear();
+//                Advance advance1= new Advance(toURLString("https://t7.baidu.com/it/u=1956604245,3662848045&fm=193&f=GIF").trim(), MediaType.IMAGE_TYPE,10);
+//                data.add(advance1);
 //                //https://t7.baidu.com/it/u=1956604245,3662848045&fm=193&f=GIF
-//                Advance advance = new Advance(toURLString("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4").trim(),"1",0);
+//                Advance advance = new Advance(toURLString("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4").trim(),MediaType.VIDEO_TYPE,0);
 //                data.add(advance);
 //                mViewPager.setData(data);
 //            }
@@ -45,14 +48,17 @@ public class MainActivity extends AppCompatActivity {
     private void initData(){
         data.clear();
         //https://t7.baidu.com/it/u=1956604245,3662848045&fm=193&f=GIF
-        Advance advance1= new Advance(toURLString("https://t7.baidu.com/it/u=1956604245,3662848045&fm=193&f=GIF").trim(),"2",10);
-        data.add(advance1);
-        Advance advance = new Advance(toURLString("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4").trim(),"1",0);
+        Advance advance = new Advance(toURLString("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4").trim(),MediaType.VIDEO_TYPE);
         data.add(advance);
-//        Advance advance2 = new Advance("http://vjs.zencdn.net/v/oceans.mp4","1",0);
-//        data.add(advance2);
-        Advance advance3 = new Advance(toURLString("https://t7.baidu.com/it/u=1415984692,3889465312&fm=193&f=GIF").trim(),"2",5);
+        Advance advance1= new Advance(toURLString("https://t7.baidu.com/it/u=1956604245,3662848045&fm=193&f=GIF").trim(),MediaType.IMAGE_TYPE,10);
+        data.add(advance1);
+        Advance advance2 = new Advance("http://vjs.zencdn.net/v/oceans.mp4",MediaType.VIDEO_TYPE);
+        data.add(advance2);
+        Advance advance3 = new Advance(toURLString("https://t7.baidu.com/it/u=1415984692,3889465312&fm=193&f=GIF").trim(),MediaType.IMAGE_TYPE,5);
         data.add(advance3);
+        //https://t7.baidu.com/it/u=2529476510,3041785782&fm=193&f=GIF
+        Advance advance4 = new Advance(toURLString("https://t7.baidu.com/it/u=2529476510,3041785782&fm=193&f=GIF").trim(),MediaType.IMAGE_TYPE,8);
+        data.add(advance4);
         mViewPager.setData(data);
     }
     @SuppressLint("ClickableViewAccessibility")
